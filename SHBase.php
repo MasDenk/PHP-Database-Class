@@ -152,7 +152,7 @@ class SHBase {
      */
     public function __construct($type = null, $host = null, $username = null, $password = null, $dbname = null, $port = null, $charset = null) {
         set_exception_handler(function($exception) {
-            echo '<b>[SunClass] Exception:</b> ' . $exception->getMessage();
+            echo '<b>[DBClass] Exception:</b> ' . $exception->getMessage();
         });
         if (is_array($type)) { // connect to db using parameters in the array
             $this->connectionParams = $type;
@@ -229,7 +229,7 @@ class SHBase {
     }
 
     /**
-     * Reset SunDB internal variables
+     * Reset internal variables
      */
     private function reset() {
         $this->query        = '';
